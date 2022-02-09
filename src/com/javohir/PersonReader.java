@@ -47,21 +47,24 @@ public class PersonReader
 
                 String words[];
 
-                System.out.println("ID#     Firstname    Lastname    Title     YOB");
-                System.out.println("==============================================");
+                System.out.println("ID#       Firstname    Lastname       Title     YOB");
+                System.out.println("=====================================================");
 
                 while(reader.ready())
                 {
                     rec = reader.readLine();
                     lines.add(rec);
                     line++;
-                    System.out.println(String.format("%s%n",rec));
+                    //System.out.println(String.format("%s%n", rec));
                 }
 
 
 
                 for(String l : lines) {
                     String fields[] = l.split(", ");
+
+                   // for(String f:fields)
+                        System.out.printf("%-10s %-10s %-15s %-10s %-5s %n",fields[0],fields[1], fields[2], fields[3], fields[4]);
 
                 }
 
